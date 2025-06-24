@@ -1,0 +1,57 @@
+.signup-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3296dc;
+}
+
+.signup-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+}
+
+.signup-subtitle {
+    font-size: 14px;
+    color: #66666675;
+    margin-bottom: 20px;
+}
+
+.btn-custom-style {
+    background-color: #3296dc;
+    color: white;
+}
+
+.username-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .username-container {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .first-name {
+        padding: 0px !important;
+        margin-bottom: 1rem;
+        width: 100%;
+        
+    }
+
+    .last-name {
+        padding: 0px !important;
+        width: 100%;
+    }
+
+}

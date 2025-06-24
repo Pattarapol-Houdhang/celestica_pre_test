@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="product-container">
+        <div class="product-content">
+            <h1 class="product-title">Product List</h1>
+            <div class="card-container">
+                <div class="card" *ngFor="let product of products">
+                    <img [src]="product.images[0]" alt="{{ product.title }}" class="product-image">
+                    <h2 class="product-name">{{ product.title }}</h2>
+                    <p class="product-description">{{ product.description }}</p>
+                    <p class="product-price">${{ product.price }}</p>
+                    <button class="btn btn-custom-style" >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <button class="btn btn-custom-style">Previous</button>
+        <button class="btn btn-custom-style">Next</button>
+    </div>
+</div>
