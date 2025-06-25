@@ -3,7 +3,7 @@ FROM node:18.19.0-alpine3.18 as build
 
 WORKDIR /celestica_pre_test
 
-# Copy package files and install dependencies
+# Copy package files and install dependenciess
 COPY ./package*.json ./
 RUN npm ci
 
