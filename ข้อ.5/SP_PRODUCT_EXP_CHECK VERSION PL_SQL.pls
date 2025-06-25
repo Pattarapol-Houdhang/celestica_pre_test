@@ -1,0 +1,21 @@
+﻿CREATE OR REPLACE PROCEDURE SP_PRODUCT_EXP_CHECK (
+    p_PRODUCT_NAME IN NVARCHAR2,
+    p_PROCTION_DATE IN DATE,
+    p_EXP_DATE IN DATE
+)
+AS
+    v_PRODUCT_AGE NUMBER := 0;
+BEGIN
+    -- คำนวณอายุผลิตภัณฑ์
+    v_PRODUCT_AGE := TRUNC(p_EXP_DATE) - TRUNC(SYSDATE);
+
+    -- แสดงผลลัพธ์
+    DBMS_OUTPUT.PUT_LINE('Name: ' || p_PRODUCT_NAME);
+    DBMS_OUTPUT.PUT_LINE('Aging: ' || v_PRODUCT_AGE);
+    IF v_PRODUCT_AGE < 0 THEN
+        DBMS_OUTPUT.PUT_LINE('IsExpired: Expired');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('IsExpired: Not Expired');
+    END IF;
+END;
+/
