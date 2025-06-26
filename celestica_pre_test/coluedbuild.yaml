@@ -1,7 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-f', 'celestica_pre_test/Dockerfile', '-t', 'gcr.io/$PROJECT_ID/your-image', '.']
-  dir: 'celestica_pre_test'
-
-images:
-- 'gcr.io/$PROJECT_ID/your-image'
